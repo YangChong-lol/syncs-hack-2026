@@ -1,7 +1,7 @@
 {
-  "name": "savemyfridge",
+  "name": "fridgetinder",
   "version": "1.0.0",
-  "description": "SaveMyFridge - match your fridge with a neighbour's and cook something together. SYNCS HACK 2026.",
+  "description": "FridgeTinder - your fridge matches a neighbour's fridge, and dinner happens. SYNCS HACK 2026.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

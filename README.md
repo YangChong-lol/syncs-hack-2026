@@ -1,10 +1,10 @@
-﻿# SaveMyFridge
+﻿# FridgeTinder
 
-**Your fridge is missing one ingredient. A neighbour's fridge has it.**
+**It's a match! Your fridge and a neighbour's fridge just swiped right on each other.**
 
-SaveMyFridge matches your fridge with a neighbour's: scan your fridge with your camera, AI reads the ingredients, finds nearby fridges whose contents *combine* with yours into real dishes, and sends an anonymous AI-written invite to cook together - before the food goes to waste.
+FridgeTinder is Tinder for fridges: scan your fridge with your camera, AI reads the ingredients, finds nearby fridges whose contents *combine* with yours into real dishes, and sends an anonymous AI-written invite to cook together - before the food goes to waste.
 
-Built for **SYNCS HACK 2026** - theme: *Blocks that make up the world*. Ingredients are blocks: alone they sit and expire, combined they become a meal and a new connection between neighbours.
+Built for **SYNCS HACK 2026** - theme: *Blocks that make up the world*. Ingredients are blocks: alone they sit and expire, combined across two fridges they become a meal and a new connection between neighbours.
 
 ## How it works
 

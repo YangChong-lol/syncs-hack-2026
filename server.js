@@ -127,7 +127,7 @@ app.post('/api/invite', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`SaveMyFridge running on http://localhost:${PORT}`);
+  console.log(`FridgeTinder running on http://localhost:${PORT}`);
   if (gemini.isMock())
     console.log('DEMO MODE: no GEMINI_API_KEY set - detection/extraction/matching use canned results.');
   if (!mailer.configured())
