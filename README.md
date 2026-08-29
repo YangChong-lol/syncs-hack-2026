@@ -33,21 +33,24 @@ copy .env.example .env    # Windows (use `cp` on macOS/Linux), then put your GEM
 npm start                 # open http://localhost:3000
 ```
 
-Log in with any email + password (first login creates the account), scan a fridge in **Profile**, drop a location pin near **Camperdown, Sydney** (that's where the 11 seed neighbours live), then start swiping.
+Then the 30-second tour:
 
-- Get a Gemini key: https://aistudio.google.com/apikey (models used: `gemini-3.6-flash` + `gemini-3.5-flash-lite`, configurable in `.env`).
-- **No key? It still runs** in demo mode with canned detection/extraction and a rule-based matcher, so the full flow is clickable.
-- **Emails**: without SMTP settings in `.env`, invites are in-app + preview only. Fill `SMTP_HOST/SMTP_USER/SMTP_PASS` (e.g. Gmail app password) to really send.
+1. Log in with **any email + password** - first login creates the account.
+2. Go to **Profile**, scan a fridge (or use "Upload a photo instead" - any photo from `public/seed-fridges/` works).
+3. **Drop your location pin in Camperdown, Sydney** - that's where all 11 seed neighbours live; pin anywhere else and you'll match with no one.
+4. Open **Swipe**, hold a dish, swipe right. Check Profile ~25 s later: the neighbour has accepted and you've exchanged contacts.
 
-### Test on a phone
+Notes:
 
-The camera API requires HTTPS, so expose the local server through a tunnel:
+- **We strongly recommend trying it on a phone** - the live camera gate (red -> green "Fridge detected") is the heart of the app. The camera API needs HTTPS, so expose the server through a tunnel and open the printed URL on your phone:
 
 ```bash
 cloudflared tunnel --url http://localhost:3000   # or: npx localtunnel --port 3000
 ```
 
-Open the printed `https://....trycloudflare.com` URL on your phone. The URL changes on every tunnel restart. No tunnel? Use the "Upload a photo instead" fallback.
+- Get a Gemini key: https://aistudio.google.com/apikey (models used: `gemini-3.6-flash` + `gemini-3.5-flash-lite`, configurable in `.env`).
+- **No key? It still runs** in demo mode with canned detection/extraction and a rule-based matcher, so the full flow is clickable.
+- **Emails**: without SMTP settings in `.env`, invites are in-app + preview only. Fill `SMTP_HOST/SMTP_USER/SMTP_PASS` (e.g. Gmail app password) to really send.
 
 ### Useful commands
 
@@ -58,16 +61,6 @@ npm run seed                        # re-extract seed inventories with your API 
 ```
 
 To reset the demo to a clean state, stop the server and delete `data/users.json` and `data/invites.json` - seed users regenerate on next start.
-
-### 中文快速开始
-
-```bash
-npm install
-copy .env.example .env    # 在 .env 里填入 GEMINI_API_KEY
-npm start                 # 打开 http://localhost:3000
-```
-
-任意邮箱+密码登录即注册;在 Profile 里扫冰箱、把地址钉在 Camperdown 附近(11 个种子邻居都在那),然后去 Swipe 划卡。不填 key 也能跑(演示模式,识别与匹配用内置假结果);填了 key 后识别、匹配、写信全部真实调用 Gemini。手机测试需要 HTTPS:`cloudflared tunnel --url http://localhost:3000` 后用手机打开输出的网址。重置演示数据:停服后删除 `data/users.json` 和 `data/invites.json`。
 
 ## Seed data
 
