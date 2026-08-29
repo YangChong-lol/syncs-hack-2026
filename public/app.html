@@ -32,18 +32,29 @@
         <button class="btn tinder" onclick="FTApp.goTab('profile')">Go to Profile</button>
       </div>
       <div id="swipeReady" class="hidden">
-        <!--
-          Swipe deck mounts here.
-          Data interface for the deck (see js/app.js):
-            FTApp.getMatches()             -> Promise<{me, matches:[{id,name,photo,distance_m,score,dishes,ingredients,invite_pending}], almost}>
-            FTApp.sendInvite(toId, dishes) -> Promise<{ok, note, preview}>  (right swipe)
-            FTApp.refreshMatches()         -> clears cache and refetches
-        -->
-        <div class="card center">
-          <h2>Swipe deck coming soon</h2>
-          <p class="hint">This tab is under construction. Use Explore to browse matched fridges on the map meanwhile.</p>
-          <button class="btn secondary" onclick="FTApp.goTab('explore')">Open Explore</button>
+        <div id="swLoading" class="card center">
+          <div class="spinner"></div>
+          <h2>Matching fridges near you...</h2>
+          <p class="hint">Finding neighbours you could cook with.</p>
         </div>
+        <div id="swDeckWrap" class="hidden">
+          <div id="swDeck" class="sw-deck"></div>
+          <div class="sw-actions">
+            <button id="swNope" aria-label="Pass">&#10005;</button>
+            <button id="swLike" aria-label="Send invite">&#9829;</button>
+          </div>
+          <p class="hint center" style="margin-top:8px">Hold the dish you want and swipe right to send an anonymous invite. Swipe left to pass.</p>
+        </div>
+        <div id="swEmpty" class="card center hidden">
+          <h2>No more fridges nearby</h2>
+          <p class="hint">You've swiped everyone for now. Refresh to see them again, or check back when more neighbours scan their fridges.</p>
+        </div>
+        <div id="swNoMatch" class="card center hidden">
+          <h2>Sorry, we can't find any matched fridges.</h2>
+          <p class="hint">Try again after adding a few more ingredients, or check back when more neighbours have scanned their fridges.</p>
+        </div>
+        <div id="swErr" class="banner err hidden"></div>
+        <button class="linkish" id="swRefresh" style="width:100%;margin-top:10px">Refresh matches</button>
       </div>
     </section>
 
@@ -211,6 +222,7 @@
   <script src="js/common.js"></script>
   <script src="js/app.js"></script>
   <script src="js/explore.js"></script>
+  <script src="js/swipe.js"></script>
   <script src="js/profile.js"></script>
 </body>
 </html>
