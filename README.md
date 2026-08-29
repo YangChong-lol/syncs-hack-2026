@@ -8,7 +8,7 @@ Built for **SYNCS HACK 2026** - theme: *Blocks that make up the world*. Ingredie
 
 ## How it works
 
-1. **Log in** (Tinder-style: email + password; first login creates your account) - you join the match pool.
+1. **Log in** (Email + password; first login creates your account) - you join the match pool.
 2. **Profile tab**: point your camera at your open fridge. A live indicator turns green ("Fridge detected") only when AI confirms the camera is actually aimed at a fridge interior - only then does the shutter unlock. After the shot, AI extracts every visible ingredient; you confirm/edit the list. Drop a pin for your location. Both are required to unlock matching.
 3. **Explore tab**: nearby fridges appear on the map. AI proposes real dishes that use ingredients from *both* fridges, with a match score (rubric-anchored, reproducible) and what each side brings. Pick dishes and send an anonymous invite - the email is AI-written and relayed by the platform.
 4. **Swipe tab** (under construction): browse matched fridges as a swipe deck; right swipe = send the invite.
