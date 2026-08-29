@@ -200,3 +200,121 @@ input:focus { border-color: var(--green); }
 
 .center { text-align: center; }
 .hidden { display: none !important; }
+.no-scroll { overflow: hidden; }
+
+/* ---------- Tinder-gradient button ---------- */
+.btn.tinder {
+  background: linear-gradient(135deg, #fd297b, #ff5864 55%, #ff655b);
+  color: #fff;
+}
+.btn.tinder:disabled { background: #e6b8c4; }
+.btn.small { width: auto; padding: 9px 16px; font-size: 13.5px; border-radius: 11px; }
+
+/* ---------- login page ---------- */
+.login-page {
+  background: linear-gradient(160deg, #fd297b 0%, #ff5864 55%, #ff655b 100%);
+  align-items: center;
+}
+.login-hero {
+  width: 100%; max-width: 400px; min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center; gap: 34px;
+  padding: 40px 26px;
+}
+.login-brand { text-align: center; color: #fff; }
+.login-brand svg { width: 64px; height: 64px; margin-bottom: 10px; }
+.login-brand h1 { font-size: 34px; letter-spacing: -0.8px; }
+.login-brand p { margin-top: 10px; font-size: 14.5px; line-height: 1.55; opacity: 0.92; }
+.login-card { display: flex; flex-direction: column; gap: 12px; }
+.login-card input {
+  width: 100%; padding: 14px 16px; font-size: 15px; border: none; border-radius: 999px;
+  outline: none; background: rgba(255, 255, 255, 0.96); color: var(--ink);
+}
+.login-card .btn { border-radius: 999px; }
+.login-card .btn.tinder { background: #fff; color: #fd297b; }
+.login-card .banner.err { background: rgba(255, 255, 255, 0.92); }
+
+/* ---------- bottom tab bar ---------- */
+.app.has-tabbar { padding-bottom: 96px; }
+.tabbar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 900;
+  display: flex; justify-content: center; gap: 6px;
+  background: var(--card); border-top: 1px solid var(--line);
+  padding: 8px 10px calc(10px + env(safe-area-inset-bottom));
+}
+.tabbar button {
+  position: relative; flex: 1; max-width: 140px;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  background: none; border: none; cursor: pointer;
+  color: var(--muted); font-size: 11.5px; font-weight: 600; padding: 5px 0;
+}
+.tabbar button svg { width: 24px; height: 24px; fill: currentColor; }
+.tabbar button.active { color: #fd297b; }
+.tabbar .badge {
+  position: absolute; top: 0; right: calc(50% - 22px);
+  min-width: 17px; height: 17px; padding: 0 4px; border-radius: 999px;
+  background: #fd297b; color: #fff; font-size: 10.5px; font-weight: 700;
+  font-style: normal; display: grid; place-items: center;
+}
+
+/* ---------- profile ---------- */
+.profile-head { flex-direction: row; align-items: center; gap: 14px; }
+.profile-head .who { flex: 1; min-width: 0; }
+.profile-head .who p { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.avatar {
+  width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, #fd297b, #ff655b);
+  color: #fff; font-size: 22px; font-weight: 700; display: grid; place-items: center;
+}
+.status-chip {
+  font-size: 11.5px; font-weight: 700; padding: 6px 10px; border-radius: 999px;
+  background: #fdf3e3; color: #92400e; white-space: nowrap;
+}
+.status-chip.ok { background: var(--green-soft); color: var(--green-dark); }
+.card-title-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.fridge-photo { width: 100%; max-height: 220px; object-fit: cover; border-radius: 14px; }
+.count-chip {
+  display: inline-grid; place-items: center; min-width: 20px; height: 20px;
+  padding: 0 6px; margin-left: 4px; border-radius: 999px;
+  background: #fd297b; color: #fff; font-size: 11.5px; vertical-align: 2px;
+}
+
+/* ---------- invites ---------- */
+.invite-list { display: flex; flex-direction: column; gap: 12px; }
+.invite-item { display: flex; gap: 12px; align-items: flex-start; }
+.invite-item img, .invite-item .ph {
+  width: 52px; height: 52px; border-radius: 12px; object-fit: cover; flex-shrink: 0;
+  background: var(--green-soft);
+}
+.invite-item .body { flex: 1; min-width: 0; }
+.invite-item h4 { font-size: 13.5px; line-height: 1.4; }
+.invite-item .invite-mail {
+  cursor: pointer; text-decoration: underline; margin-top: 3px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.invite-actions { display: flex; gap: 8px; margin-top: 8px; }
+.ok-text { font-size: 12.5px; color: var(--green); font-weight: 600; margin-top: 4px; word-break: break-all; }
+.pending-tag {
+  font-size: 10.5px; font-weight: 700; color: #92400e; background: #fdf3e3;
+  border-radius: 999px; padding: 3px 8px; vertical-align: 1px;
+}
+
+/* ---------- lock cards / scan overlay ---------- */
+.lock-card { gap: 14px; padding: 34px 22px; }
+.scan-overlay {
+  position: fixed; inset: 0; z-index: 950; overflow-y: auto;
+  background: #10161a;
+}
+.scan-inner {
+  max-width: 460px; margin: 0 auto; padding: 16px 18px 40px;
+  display: flex; flex-direction: column;
+}
+.scan-close { align-self: flex-end; color: #cfd8d2; margin-bottom: 10px; }
+
+/* ---------- toast ---------- */
+.toast {
+  position: fixed; left: 50%; bottom: 104px; transform: translateX(-50%) translateY(16px);
+  max-width: 86vw; background: rgba(28, 43, 34, 0.95); color: #fff;
+  padding: 12px 18px; border-radius: 999px; font-size: 13.5px; line-height: 1.4;
+  opacity: 0; pointer-events: none; transition: opacity 0.25s, transform 0.25s; z-index: 1200;
+}
+.toast.open { opacity: 1; transform: translateX(-50%) translateY(0); }

@@ -1,28 +1,43 @@
-if (!SMF.getEmail()) location.href = 'index.html';
+// Explore tab: matched fridges on a map + list, invite via dish modal.
 
+let exMap = null;
+let exMarkers = [];
+let exLoaded = false;
 let currentMatch = null;
 
-function fmtDist(m) {
-  return m < 1000 ? m + ' m away' : (m / 1000).toFixed(1) + ' km away';
-}
+document.addEventListener('tabshown', (e) => {
+  if (e.detail !== 'explore' || !FTApp.state.profileComplete) return;
+  if (!exLoaded) loadExplore();
+  else if (exMap) setTimeout(() => exMap.invalidateSize(), 60);
+});
 
-async function load() {
+el('exRefresh').addEventListener('click', () => {
+  exLoaded = false;
+  FTApp.refreshMatches();
+  loadExplore();
+});
+
+async function loadExplore() {
+  exLoaded = true;
+  hide(el('exResults'));
+  hide(el('exNoMatch'));
+  hide(el('exErr'));
+  show(el('exLoading'));
   try {
-    const data = await api('/api/matches?email=' + encodeURIComponent(SMF.getEmail()));
-    hide(el('loading'));
+    const data = await FTApp.getMatches();
+    hide(el('exLoading'));
     if (!data.matches.length) return renderNoMatch(data.almost);
     renderResults(data);
   } catch (e) {
-    hide(el('loading'));
-    if (/no inventory/.test(e.message)) return (location.href = 'scan.html');
-    const err = el('err');
+    hide(el('exLoading'));
+    const err = el('exErr');
     err.textContent = e.message;
     show(err);
   }
 }
 
 function renderNoMatch(almost) {
-  show(el('noMatch'));
+  show(el('exNoMatch'));
   const t = el('almostText');
   if (almost && almost.dishes && almost.dishes.length) {
     const d = almost.dishes[0];
@@ -36,15 +51,21 @@ function renderNoMatch(almost) {
 }
 
 function renderResults(data) {
-  show(el('results'));
-  const map = L.map('map');
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors',
-  }).addTo(map);
+  show(el('exResults'));
+
+  if (!exMap) {
+    exMap = L.map('map');
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors',
+    }).addTo(exMap);
+  }
+  exMarkers.forEach((m) => m.remove());
+  exMarkers = [];
 
   const meIcon = L.divIcon({ className: '', html: '<div class="me-pin"></div>', iconSize: [18, 18], iconAnchor: [9, 9] });
-  const meMarker = L.marker([data.me.lat, data.me.lng], { icon: meIcon }).addTo(map);
+  const meMarker = L.marker([data.me.lat, data.me.lng], { icon: meIcon }).addTo(exMap);
   meMarker.bindTooltip('You', { permanent: true, direction: 'top', offset: [0, -8] });
+  exMarkers.push(meMarker);
 
   const bounds = [[data.me.lat, data.me.lng]];
   const list = el('matchList');
@@ -57,15 +78,17 @@ function renderResults(data) {
       iconSize: [52, 52],
       iconAnchor: [26, 26],
     });
-    L.marker([m.lat, m.lng], { icon }).addTo(map).on('click', () => openModal(m));
+    const marker = L.marker([m.lat, m.lng], { icon }).addTo(exMap).on('click', () => openModal(m));
+    exMarkers.push(marker);
     bounds.push([m.lat, m.lng]);
 
+    const pendingTag = m.invite_pending ? '<span class="pending-tag">Invite pending</span>' : '';
     const card = document.createElement('div');
     card.className = 'match-card';
     card.innerHTML = `
       <img src="${m.photo}" alt="fridge" />
       <div class="info">
-        <h3>${m.name}'s fridge</h3>
+        <h3>${m.name}'s fridge ${pendingTag}</h3>
         <p>${fmtDist(m.distance_m)} \u00b7 ${m.dishes.length} dish idea${m.dishes.length > 1 ? 's' : ''}</p>
         <p>${m.dishes.map((d) => d.name).join(', ')}</p>
       </div>
@@ -74,10 +97,13 @@ function renderResults(data) {
     list.appendChild(card);
   });
 
-  map.fitBounds(bounds, { padding: [40, 40], maxZoom: 16 });
+  setTimeout(() => {
+    exMap.invalidateSize();
+    exMap.fitBounds(bounds, { padding: [40, 40], maxZoom: 16 });
+  }, 60);
 }
 
-// ---------- modal ----------
+// ---------- dish modal ----------
 
 function openModal(m) {
   currentMatch = m;
@@ -99,15 +125,16 @@ function openModal(m) {
         <p>They bring: ${(d.uses_theirs || []).join(', ') || '-'}</p>
         ${missing}
       </div>`;
-    row.querySelector('input').addEventListener('change', (e) => {
-      row.classList.toggle('selected', e.target.checked);
+    row.querySelector('input').addEventListener('change', (ev) => {
+      row.classList.toggle('selected', ev.target.checked);
     });
     list.appendChild(row);
   });
   hide(el('modalResult'));
   show(el('modalPick'));
   hide(el('inviteErr'));
-  el('sendBtn').disabled = false;
+  el('sendBtn').disabled = !!m.invite_pending;
+  el('sendBtn').textContent = m.invite_pending ? 'Invite already pending' : 'Send anonymous invite';
   el('modalBg').classList.add('open');
 }
 
@@ -129,12 +156,9 @@ el('sendBtn').addEventListener('click', async () => {
   }
   try {
     el('sendBtn').disabled = true;
-    const r = await api('/api/invite', {
-      fromEmail: SMF.getEmail(),
-      toId: currentMatch.id,
-      dishes: selected,
-    });
-    el('resultTitle').textContent = r.sent ? 'Invite sent anonymously' : 'Invite ready (preview)';
+    const r = await FTApp.sendInvite(currentMatch.id, selected);
+    currentMatch.invite_pending = true;
+    el('resultTitle').textContent = r.emailed ? 'Invite sent anonymously' : 'Invite delivered';
     el('resultNote').textContent = r.note;
     el('emailPreview').innerHTML = `<b>${r.preview.subject}</b>${r.preview.body}`;
     hide(el('modalPick'));
@@ -145,5 +169,3 @@ el('sendBtn').addEventListener('click', async () => {
     el('sendBtn').disabled = false;
   }
 });
-
-load();

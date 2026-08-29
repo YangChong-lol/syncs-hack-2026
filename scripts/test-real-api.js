@@ -9,11 +9,13 @@ function toDataUrl(file) {
   return `data:image/${ext};base64,` + fs.readFileSync(file).toString('base64');
 }
 
+let TOKEN = '';
+
 async function post(path, body) {
   const t0 = Date.now();
   const res = await fetch(BASE + path, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + TOKEN },
     body: JSON.stringify(body),
   });
   const json = await res.json();
@@ -22,6 +24,8 @@ async function post(path, body) {
 
 (async () => {
   const [fridgeImg, otherImg] = process.argv.slice(2);
+
+  TOKEN = (await post('/api/auth/login', { email: 'vision-test@example.com', password: 'test1234' })).json.token;
 
   console.log('--- detect: real fridge photo ---');
   let r = await post('/api/detect', { image: toDataUrl(fridgeImg) });

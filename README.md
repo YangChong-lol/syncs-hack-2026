@@ -8,9 +8,11 @@ Built for **SYNCS HACK 2026** - theme: *Blocks that make up the world*. Ingredie
 
 ## How it works
 
-1. **Step 1 - Who & where**: enter your email (never shown to anyone) and drop a pin on the map.
-2. **Step 2 - Scan**: point your camera at your open fridge. A live indicator turns green ("Fridge detected") only when AI confirms the camera is actually aimed at a fridge interior - only then does the shutter unlock. After the shot, AI extracts every visible ingredient; you confirm/edit the list.
-3. **Step 3 - Match**: nearby fridges appear on the map. AI proposes real dishes that use ingredients from *both* fridges, with a match score (rubric-anchored, reproducible) and what each side brings. Pick dishes and send an anonymous invite - the email is AI-written and relayed by the platform, so no one's address is exposed until both sides agree.
+1. **Log in** (Tinder-style: email + password; first login creates your account) - you join the match pool.
+2. **Profile tab**: point your camera at your open fridge. A live indicator turns green ("Fridge detected") only when AI confirms the camera is actually aimed at a fridge interior - only then does the shutter unlock. After the shot, AI extracts every visible ingredient; you confirm/edit the list. Drop a pin for your location. Both are required to unlock matching.
+3. **Explore tab**: nearby fridges appear on the map. AI proposes real dishes that use ingredients from *both* fridges, with a match score (rubric-anchored, reproducible) and what each side brings. Pick dishes and send an anonymous invite - the email is AI-written and relayed by the platform.
+4. **Swipe tab** (under construction): browse matched fridges as a swipe deck; right swipe = send the invite.
+5. **Invites**: recipients see the invite in their Profile inbox (real users also get the email). When they hit **Accept**, and only then, both sides see each other's contact - emails stay private until mutual consent. Demo seed users auto-accept after ~25 s so the full loop can be shown live.
 
 ## Tech
 
@@ -52,15 +54,19 @@ npm run seed
 ## Project structure
 
 ```
-server.js            Express app + API routes
+server.js            Express app + API routes (auth, invites, matching)
 lib/gemini.js        Gemini calls + demo-mode fallbacks
-lib/store.js         JSON user store, geo search
+lib/store.js         JSON user store, auth, invites, geo search
 lib/mailer.js        anonymous email relay
 prompts/             all LLM prompts (the real "source code" of the AI)
-public/              3-page frontend (index -> scan -> matches)
+public/index.html    login page (email + password)
+public/app.html      main app: Swipe / Explore / Profile tabs
+public/js/app.js     app shell + FTApp interface (swipe deck plugs in here)
+public/js/explore.js map of matched fridges + invite modal
+public/js/profile.js fridge scan, location, invite inbox/outbox
 public/seed-fridges/ seed users' fridge photos
 data/users.seed.json seed users (real recognition results)
-scripts/extract-seeds.js  re-extract seed inventories via API
+scripts/             seed extraction + E2E test scripts
 ```
 
 ## Credits / third-party
