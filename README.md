@@ -39,6 +39,7 @@ Then the 30-second tour:
 2. Go to **Profile**, scan a fridge (or use "Upload a photo instead" - any photo from `public/seed-fridges/` works).
 3. **Drop your location pin in Camperdown, Sydney** - that's where all 11 seed neighbours live; pin anywhere else and you'll match with no one.
 4. Open **Swipe**, hold a dish, swipe right. Check Profile ~25 s later: the neighbour has accepted and you've exchanged contacts.
+5. Even better with friends: grab a few people and register together (same server, pins near each other). Everyone who scans a fridge joins the match pool for real - you'll show up in each other's swipe decks, invites land in each other's inboxes, and accepting exchanges contacts. Nothing is simulated between real users.
 
 Notes:
 
