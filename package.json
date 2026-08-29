@@ -1,0 +1,18 @@
+{
+  "name": "savemyfridge",
+  "version": "1.0.0",
+  "description": "SaveMyFridge - match your fridge with a neighbour's and cook something together. SYNCS HACK 2026.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node scripts/extract-seeds.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13"
+  }
+}

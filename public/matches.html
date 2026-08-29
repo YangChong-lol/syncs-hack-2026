@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matches - SaveMyFridge</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="brand">
+        <div class="mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+            <rect x="5" y="2" width="14" height="20" rx="2" />
+            <line x1="5" y1="10" x2="19" y2="10" />
+            <line x1="8" y1="5.5" x2="8" y2="7.5" />
+            <line x1="8" y1="13" x2="8" y2="16" />
+          </svg>
+        </div>
+        <h1>Save<span>My</span>Fridge</h1>
+      </div>
+      <div class="step">Step 3 / 3</div>
+    </div>
+
+    <div id="loading" class="card center">
+      <div class="spinner"></div>
+      <h2>Matching fridges near you...</h2>
+      <p class="hint">Comparing your ingredients with your neighbours'.</p>
+    </div>
+
+    <div id="results" class="hidden">
+      <div id="map"></div>
+      <p class="hint" style="margin-top:10px">Tap a fridge on the map or in the list to see what you could cook together.</p>
+      <div id="matchList" style="display:flex;flex-direction:column;gap:12px;margin-top:12px"></div>
+    </div>
+
+    <div id="noMatch" class="card center hidden">
+      <h2>Sorry, we can't find any matched fridges.</h2>
+      <p class="hint" id="almostText"></p>
+      <button class="btn secondary" onclick="location.href='scan.html'">Rescan my fridge</button>
+    </div>
+
+    <div id="err" class="banner err hidden"></div>
+    <button class="linkish" onclick="location.href='scan.html'" style="width:100%">Rescan my fridge</button>
+  </div>
+
+  <!-- dish modal -->
+  <div class="modal-bg" id="modalBg">
+    <div class="modal">
+      <div id="modalPick">
+        <h2 id="modalTitle">Cook together</h2>
+        <p class="hint" id="modalSub"></p>
+        <div id="dishList" style="display:flex;flex-direction:column;gap:10px;margin-top:10px"></div>
+        <div id="inviteErr" class="banner err hidden" style="margin-top:10px"></div>
+        <button class="btn" id="sendBtn" style="margin-top:14px">Send anonymous invite</button>
+        <button class="linkish" id="closeModal" style="margin-top:10px;width:100%">Close</button>
+      </div>
+      <div id="modalResult" class="hidden">
+        <h2 id="resultTitle">Invite sent</h2>
+        <div id="resultNote" class="banner ok" style="margin-top:10px"></div>
+        <div class="email-preview" id="emailPreview" style="margin-top:12px"></div>
+        <button class="btn secondary" id="doneBtn" style="margin-top:14px">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/matches.js"></script>
+</body>
+</html>

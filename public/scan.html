@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scan your fridge - SaveMyFridge</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="brand">
+        <div class="mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+            <rect x="5" y="2" width="14" height="20" rx="2" />
+            <line x1="5" y1="10" x2="19" y2="10" />
+            <line x1="8" y1="5.5" x2="8" y2="7.5" />
+            <line x1="8" y1="13" x2="8" y2="16" />
+          </svg>
+        </div>
+        <h1>Save<span>My</span>Fridge</h1>
+      </div>
+      <div class="step">Step 2 / 3</div>
+    </div>
+
+    <!-- camera stage -->
+    <div id="stage-camera">
+      <div class="cam-wrap">
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="overlay"></canvas>
+        <div id="indicator" class="indicator idle"><span class="dot"></span><span id="indicatorText">Starting camera...</span></div>
+      </div>
+      <div class="cam-controls" style="margin-top:14px">
+        <button id="shutter" disabled aria-label="Take photo"></button>
+        <p class="hint">Open your fridge and point the camera at it. The button unlocks when a fridge is detected.</p>
+        <button class="linkish" id="uploadLink">Camera not working? Upload a photo instead</button>
+        <input type="file" id="uploadInput" accept="image/*" class="hidden" />
+      </div>
+    </div>
+
+    <!-- analyzing stage -->
+    <div id="stage-analyzing" class="card center hidden">
+      <div class="spinner"></div>
+      <h2>Reading your fridge...</h2>
+      <p class="hint">AI is identifying every ingredient it can see.</p>
+    </div>
+
+    <!-- confirm stage -->
+    <div id="stage-confirm" class="hidden">
+      <div class="card">
+        <h2>We found these in your fridge</h2>
+        <p class="hint">Remove anything wrong. Dashed items expire soon - we prioritise saving them.</p>
+        <div class="chips" id="ingList"></div>
+      </div>
+      <div class="card" id="uncCard" style="margin-top:14px">
+        <h2>Not sure about these - tap + to keep</h2>
+        <div class="chips" id="uncList"></div>
+      </div>
+      <div class="card" style="margin-top:14px">
+        <h2>Add anything we missed</h2>
+        <div class="addrow">
+          <input type="text" id="addInput" placeholder="e.g. leftover rice" />
+          <button class="btn secondary" id="addBtn">Add</button>
+        </div>
+      </div>
+      <div id="confirmErr" class="banner err hidden" style="margin-top:14px"></div>
+      <button class="btn" id="saveBtn" style="margin-top:14px">Save fridge &amp; find matches</button>
+      <button class="linkish" id="retakeBtn" style="margin-top:10px;width:100%">Retake photo</button>
+    </div>
+
+    <div id="camErr" class="banner err hidden"></div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/scan.js"></script>
+</body>
+</html>
