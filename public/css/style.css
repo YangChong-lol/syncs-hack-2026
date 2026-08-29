@@ -360,6 +360,13 @@ input:focus { border-color: var(--green); }
 }
 .sw-stamp.like { left: 16px; color: #16a34a; border-color: #16a34a; transform: rotate(-14deg); }
 .sw-stamp.nope { right: 16px; color: #dc2626; border-color: #dc2626; transform: rotate(14deg); }
+.sw-emoji {
+  position: absolute; top: 50%; left: 50%; z-index: 6;
+  transform: translate(-50%, -50%) scale(0.6);
+  font-size: 74px; line-height: 1; letter-spacing: 6px; white-space: nowrap;
+  opacity: 0; pointer-events: none;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
 .sw-actions {
   position: absolute; left: 0; right: 0; bottom: 18px; z-index: 400;
   display: flex; justify-content: center; gap: 34px; pointer-events: none;

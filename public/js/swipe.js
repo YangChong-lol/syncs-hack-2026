@@ -50,6 +50,8 @@ function buildCard(m) {
   card.innerHTML = `
     <div class="sw-stamp like">INVITE</div>
     <div class="sw-stamp nope">PASS</div>
+    <div class="sw-emoji like">&#128525;&#10084;&#65039;</div>
+    <div class="sw-emoji nope">&#128546;&#128148;</div>
     <img class="sw-photo" src="${m.photo}" alt="${m.name}'s fridge" draggable="false" />
     <div class="sw-grad"></div>
     <div class="sw-info">
@@ -93,6 +95,8 @@ function attachDrag(card, m) {
 
   const likeStamp = card.querySelector('.sw-stamp.like');
   const nopeStamp = card.querySelector('.sw-stamp.nope');
+  const likeEmoji = card.querySelector('.sw-emoji.like');
+  const nopeEmoji = card.querySelector('.sw-emoji.nope');
 
   card.addEventListener('pointerdown', (e) => {
     if (!swStack.length || swStack[0].el !== card) return;
@@ -112,8 +116,14 @@ function attachDrag(card, m) {
     dx = e.clientX - startX;
     dy = e.clientY - startY;
     card.style.transform = `translate(${dx}px, ${dy * 0.35}px) rotate(${dx * 0.06}deg)`;
-    likeStamp.style.opacity = Math.min(1, Math.max(0, dx / 90));
-    nopeStamp.style.opacity = Math.min(1, Math.max(0, -dx / 90));
+    const likeAmt = Math.min(1, Math.max(0, dx / 90));
+    const nopeAmt = Math.min(1, Math.max(0, -dx / 90));
+    likeStamp.style.opacity = likeAmt;
+    nopeStamp.style.opacity = nopeAmt;
+    likeEmoji.style.opacity = likeAmt;
+    nopeEmoji.style.opacity = nopeAmt;
+    likeEmoji.style.transform = `translate(-50%, -50%) scale(${0.6 + likeAmt * 0.55})`;
+    nopeEmoji.style.transform = `translate(-50%, -50%) scale(${0.6 + nopeAmt * 0.55})`;
   });
 
   const release = () => {
@@ -125,6 +135,8 @@ function attachDrag(card, m) {
     card.style.transform = '';
     likeStamp.style.opacity = 0;
     nopeStamp.style.opacity = 0;
+    likeEmoji.style.opacity = 0;
+    nopeEmoji.style.opacity = 0;
   };
   card.addEventListener('pointerup', release);
   card.addEventListener('pointercancel', release);
@@ -139,6 +151,9 @@ function fling(card, dir) {
   const { match } = swStack.shift();
 
   card.querySelector(dir > 0 ? '.sw-stamp.like' : '.sw-stamp.nope').style.opacity = 1;
+  const emoji = card.querySelector(dir > 0 ? '.sw-emoji.like' : '.sw-emoji.nope');
+  emoji.style.opacity = 1;
+  emoji.style.transform = 'translate(-50%, -50%) scale(1.15)';
   card.style.transition = 'transform 0.35s ease, opacity 0.35s ease';
   card.style.transform = `translate(${dir * (window.innerWidth + 140)}px, -30px) rotate(${dir * 18}deg)`;
   card.style.opacity = '0';
