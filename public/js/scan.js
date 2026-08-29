@@ -26,7 +26,7 @@ async function startCamera() {
     video.addEventListener('loadedmetadata', () => {
       sizeOverlay();
       detectLoop();
-      detectTimer = setInterval(detectLoop, 2600);
+      detectTimer = setInterval(detectLoop, 3000);
     });
   } catch (e) {
     const err = el('camErr');

@@ -7,30 +7,110 @@
     "lng": 151.1747,
     "photo": "/seed-fridges/fridge01.jpg",
     "seed": true,
-    "updated_at": "2026-08-29T00:00:00Z",
+    "updated_at": "2026-08-29T11:08:07.224Z",
     "ingredients": [
-      { "name": "eggs", "quantity": "1 tray (~12)", "category": "egg", "freshness": "fresh" },
-      { "name": "cherry tomatoes", "quantity": "1 box", "category": "vegetable", "freshness": "fresh" },
-      { "name": "coriander", "quantity": "1 container", "category": "vegetable", "freshness": "use_soon" },
-      { "name": "napa cabbage", "quantity": "1 head", "category": "vegetable", "freshness": "fresh" },
-      { "name": "green chillies", "quantity": "1 bunch", "category": "vegetable", "freshness": "fresh" },
-      { "name": "kabocha pumpkin", "quantity": "2 small", "category": "vegetable", "freshness": "fresh" },
-      { "name": "apples", "quantity": "4", "category": "fruit", "freshness": "fresh" },
-      { "name": "pears", "quantity": "3", "category": "fruit", "freshness": "fresh" },
-      { "name": "pomegranates", "quantity": "4", "category": "fruit", "freshness": "fresh" },
-      { "name": "rockmelon", "quantity": "1 wrapped half", "category": "fruit", "freshness": "use_soon" },
-      { "name": "cut pineapple", "quantity": "1 container", "category": "fruit", "freshness": "use_soon" },
-      { "name": "chilli beef sauce", "quantity": "1 jar", "category": "condiment", "freshness": "unknown" },
-      { "name": "pickled chilli sauce", "quantity": "1 jar", "category": "condiment", "freshness": "unknown" },
-      { "name": "ketchup", "quantity": "1 bottle", "category": "condiment", "freshness": "unknown" },
-      { "name": "cola", "quantity": "2 cans", "category": "beverage", "freshness": "unknown" },
-      { "name": "jasmine tea drink", "quantity": "1 bottle", "category": "beverage", "freshness": "unknown" },
-      { "name": "vitamin orange drink", "quantity": "1 bottle", "category": "beverage", "freshness": "unknown" }
+      {
+        "name": "canned soda",
+        "quantity": "2 cans",
+        "category": "beverage",
+        "freshness": "unknown"
+      },
+      {
+        "name": "tea drink",
+        "quantity": "1 bottle",
+        "category": "beverage",
+        "freshness": "unknown"
+      },
+      {
+        "name": "fruit juice",
+        "quantity": "1 bottle",
+        "category": "beverage",
+        "freshness": "unknown"
+      },
+      {
+        "name": "cooked chicken",
+        "quantity": "1 container",
+        "category": "meat",
+        "freshness": "unknown"
+      },
+      {
+        "name": "cilantro",
+        "quantity": "1 container",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "chili sauce",
+        "quantity": "1 jar",
+        "category": "condiment",
+        "freshness": "unknown"
+      },
+      {
+        "name": "eggs",
+        "quantity": "1 container",
+        "category": "egg",
+        "freshness": "unknown"
+      },
+      {
+        "name": "apples",
+        "quantity": "4",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "asian pears",
+        "quantity": "3",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "pomegranates",
+        "quantity": "5",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "kabocha squash",
+        "quantity": "2",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "green chili peppers",
+        "quantity": "4",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "cabbage",
+        "quantity": "1 head",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "sausage",
+        "quantity": "1 piece",
+        "category": "meat",
+        "freshness": "unknown"
+      }
     ],
     "uncertain": [
-      { "name": "sliced cheese", "reason": "yellow packs in bottom drawer, label unclear" },
-      { "name": "frozen taro balls", "reason": "bagged white cubes, partially visible" },
-      { "name": "cooked leftovers", "reason": "opaque sealed containers on top shelf" }
+      {
+        "name": "fried bean curd rolls or bread sticks",
+        "reason": "Bagged items on second shelf are obscured and partially visible."
+      },
+      {
+        "name": "small orange fruits",
+        "reason": "Could be loquats, kumquats, or small plums."
+      },
+      {
+        "name": "bottled drinks in bottom drawer",
+        "reason": "Labels are facing away or partially obscured."
+      },
+      {
+        "name": "cut fruit in containers",
+        "reason": "Lids and reflections make exact fruit type uncertain."
+      }
     ]
   },
   {
@@ -41,22 +121,54 @@
     "lng": 151.1785,
     "photo": "/seed-fridges/fridge02.jpg",
     "seed": true,
-    "updated_at": "2026-08-29T00:00:00Z",
+    "updated_at": "2026-08-29T11:08:19.686Z",
     "ingredients": [
-      { "name": "fresh milk", "quantity": "2 bottles", "category": "dairy", "freshness": "fresh" },
-      { "name": "yogurt drinks", "quantity": "3 bottles", "category": "dairy", "freshness": "fresh" },
-      { "name": "yogurt cups", "quantity": "4 cups", "category": "dairy", "freshness": "fresh" },
-      { "name": "coconut drink", "quantity": "1 bottle", "category": "beverage", "freshness": "unknown" },
-      { "name": "baked buns", "quantity": "2 packs", "category": "grain", "freshness": "use_soon" },
-      { "name": "sandwich bread", "quantity": "1 container", "category": "grain", "freshness": "use_soon" },
-      { "name": "grapes", "quantity": "1 bag", "category": "fruit", "freshness": "fresh" },
-      { "name": "apples", "quantity": "2", "category": "fruit", "freshness": "fresh" },
-      { "name": "oranges", "quantity": "2", "category": "fruit", "freshness": "fresh" },
-      { "name": "juice boxes", "quantity": "several", "category": "beverage", "freshness": "unknown" }
+      {
+        "name": "strawberries",
+        "quantity": "1 container",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "grapes",
+        "quantity": "1 bag",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "apple",
+        "quantity": "2",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "2 tubs",
+        "category": "dairy",
+        "freshness": "unknown"
+      }
     ],
     "uncertain": [
-      { "name": "egg tarts", "reason": "round pastries in clamshell, low light" },
-      { "name": "strawberries", "reason": "red items in bagged container, dim photo" }
+      {
+        "name": "bottled drinks and cups on top shelf",
+        "reason": "Brand labels on bottles and yogurt cups are small or partially obscured"
+      },
+      {
+        "name": "leafy greens in plastic bag",
+        "reason": "Partially visible through plastic bag"
+      },
+      {
+        "name": "prepared food containers",
+        "reason": "Cooked food items in plastic takeout boxes cannot be identified with certainty"
+      },
+      {
+        "name": "paper bag contents",
+        "reason": "Item is completely concealed inside opaque bag"
+      },
+      {
+        "name": "stacked cartons in bottom drawer",
+        "reason": "Cartons are stacked tightly making specific product names hard to confirm"
+      }
     ]
   },
   {
@@ -67,25 +179,118 @@
     "lng": 151.1772,
     "photo": "/seed-fridges/fridge03.jpg",
     "seed": true,
-    "updated_at": "2026-08-29T00:00:00Z",
+    "updated_at": "2026-08-29T11:08:31.293Z",
     "ingredients": [
-      { "name": "peeled prawns", "quantity": "1 container", "category": "seafood", "freshness": "use_soon" },
-      { "name": "eggs", "quantity": "1 box", "category": "egg", "freshness": "fresh" },
-      { "name": "fresh milk", "quantity": "4 small bottles", "category": "dairy", "freshness": "fresh" },
-      { "name": "yogurt cups", "quantity": "1 stack", "category": "dairy", "freshness": "fresh" },
-      { "name": "flavoured yogurt drinks", "quantity": "3 bottles", "category": "dairy", "freshness": "fresh" },
-      { "name": "blueberries", "quantity": "2 boxes", "category": "fruit", "freshness": "fresh" },
-      { "name": "raspberries", "quantity": "1 box", "category": "fruit", "freshness": "use_soon" },
-      { "name": "peaches", "quantity": "3", "category": "fruit", "freshness": "fresh" },
-      { "name": "green grapes", "quantity": "1 box", "category": "fruit", "freshness": "fresh" },
-      { "name": "millet and mixed grains", "quantity": "3 jars", "category": "grain", "freshness": "unknown" },
-      { "name": "chilli sauce", "quantity": "1 pouch", "category": "condiment", "freshness": "unknown" },
-      { "name": "electrolyte water", "quantity": "1 bottle", "category": "beverage", "freshness": "unknown" }
+      {
+        "name": "iced tea",
+        "quantity": "2 bottles",
+        "category": "beverage",
+        "freshness": "unknown"
+      },
+      {
+        "name": "milk",
+        "quantity": "1 carton",
+        "category": "dairy",
+        "freshness": "unknown"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "multiple cups",
+        "category": "dairy",
+        "freshness": "unknown"
+      },
+      {
+        "name": "blueberries",
+        "quantity": "2 containers",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "cherries",
+        "quantity": "1 container",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "shrimp",
+        "quantity": "1 container",
+        "category": "seafood",
+        "freshness": "unknown"
+      },
+      {
+        "name": "peaches",
+        "quantity": "about 4",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "eggs",
+        "quantity": "6 eggs",
+        "category": "egg",
+        "freshness": "fresh"
+      },
+      {
+        "name": "green grapes",
+        "quantity": "1 bunch",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "bread",
+        "quantity": "1 package",
+        "category": "grain",
+        "freshness": "unknown"
+      },
+      {
+        "name": "water",
+        "quantity": "1 bottle",
+        "category": "beverage",
+        "freshness": "unknown"
+      },
+      {
+        "name": "red beans",
+        "quantity": "1 jar",
+        "category": "grain",
+        "freshness": "unknown"
+      },
+      {
+        "name": "black beans",
+        "quantity": "1 jar",
+        "category": "grain",
+        "freshness": "unknown"
+      },
+      {
+        "name": "cornmeal",
+        "quantity": "1 jar",
+        "category": "grain",
+        "freshness": "unknown"
+      },
+      {
+        "name": "millet",
+        "quantity": "1 jar",
+        "category": "grain",
+        "freshness": "unknown"
+      },
+      {
+        "name": "flavored milk",
+        "quantity": "3 bottles",
+        "category": "dairy",
+        "freshness": "unknown"
+      }
     ],
     "uncertain": [
-      { "name": "olive oil", "reason": "dark bottles on door, labels not readable" },
-      { "name": "mulberries", "reason": "dark berries in container, could be blackberries" },
-      { "name": "red beans", "reason": "door jars with dark red grains" }
+      {
+        "name": "orange paste/sauce",
+        "reason": "Visible in glass jar on lower main shelf, precise type of condiment is unclear"
+      },
+      {
+        "name": "dark round objects in lower bins",
+        "reason": "Partially obscured inside translucent plastic storage containers"
+      },
+      {
+        "name": "door condiments",
+        "reason": "Various condiment squeeze pouches and bottles with partially visible labels"
+      }
     ]
   },
   {
@@ -96,27 +301,120 @@
     "lng": 151.1741,
     "photo": "/seed-fridges/fridge04.jpg",
     "seed": true,
-    "updated_at": "2026-08-29T00:00:00Z",
+    "updated_at": "2026-08-29T11:08:44.397Z",
     "ingredients": [
-      { "name": "cooked chicken breast", "quantity": "1 container", "category": "meat", "freshness": "use_soon" },
-      { "name": "peeled prawns", "quantity": "2 containers", "category": "seafood", "freshness": "use_soon" },
-      { "name": "boiled eggs", "quantity": "1 container (halved)", "category": "egg", "freshness": "fresh" },
-      { "name": "broccoli", "quantity": "2 containers", "category": "vegetable", "freshness": "fresh" },
-      { "name": "cucumber slices", "quantity": "1 container", "category": "vegetable", "freshness": "fresh" },
-      { "name": "cherry tomatoes", "quantity": "1 container", "category": "vegetable", "freshness": "fresh" },
-      { "name": "lettuce", "quantity": "2 containers", "category": "vegetable", "freshness": "fresh" },
-      { "name": "celery sticks", "quantity": "1 container", "category": "vegetable", "freshness": "fresh" },
-      { "name": "corn kernels", "quantity": "1 container", "category": "vegetable", "freshness": "fresh" },
-      { "name": "edamame", "quantity": "1 container", "category": "vegetable", "freshness": "fresh" },
-      { "name": "cabbage", "quantity": "1 head", "category": "vegetable", "freshness": "fresh" },
-      { "name": "yellow capsicum", "quantity": "1", "category": "vegetable", "freshness": "fresh" },
-      { "name": "apples", "quantity": "3", "category": "fruit", "freshness": "fresh" },
-      { "name": "oranges", "quantity": "2", "category": "fruit", "freshness": "fresh" },
-      { "name": "lemon", "quantity": "1", "category": "fruit", "freshness": "fresh" },
-      { "name": "coconut water", "quantity": "6 bottles", "category": "beverage", "freshness": "unknown" }
+      {
+        "name": "coconut water",
+        "quantity": "6 bottles",
+        "category": "beverage",
+        "freshness": "fresh"
+      },
+      {
+        "name": "shrimp",
+        "quantity": "4 containers",
+        "category": "seafood",
+        "freshness": "fresh"
+      },
+      {
+        "name": "broccoli",
+        "quantity": "1 container",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "sliced cucumber",
+        "quantity": "2 containers",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "cherry tomatoes",
+        "quantity": "1 container",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "yellow bell pepper",
+        "quantity": "1 whole",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "lettuce",
+        "quantity": "2 containers",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "chicken breast",
+        "quantity": "1 container",
+        "category": "meat",
+        "freshness": "fresh"
+      },
+      {
+        "name": "celery",
+        "quantity": "1 container",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "edamame",
+        "quantity": "1 container",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "boiled eggs",
+        "quantity": "1 container",
+        "category": "egg",
+        "freshness": "fresh"
+      },
+      {
+        "name": "green apple",
+        "quantity": "1 whole",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "lemon",
+        "quantity": "2 whole",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "red apple",
+        "quantity": "4 whole",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "cabbage",
+        "quantity": "1 head",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "cucumber",
+        "quantity": "4 whole",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "orange",
+        "quantity": "1 whole",
+        "category": "fruit",
+        "freshness": "fresh"
+      }
     ],
     "uncertain": [
-      { "name": "cheese cubes", "reason": "orange cubes in container, could be mango" }
+      {
+        "name": "cubed orange food",
+        "reason": "Unclear whether it is cut mango, pumpkin, or sweet potato"
+      },
+      {
+        "name": "mixed vegetable container",
+        "reason": "Layered container with corn and broccoli, contents partially obscured"
+      }
     ]
   },
   {
@@ -127,16 +425,44 @@
     "lng": 151.1795,
     "photo": "/seed-fridges/fridge05.jpg",
     "seed": true,
-    "updated_at": "2026-08-29T00:00:00Z",
+    "updated_at": "2026-08-29T11:08:52.657Z",
     "ingredients": [
-      { "name": "fresh milk", "quantity": "8 small bottles", "category": "dairy", "freshness": "fresh" },
-      { "name": "greek yogurt", "quantity": "2 tubs", "category": "dairy", "freshness": "fresh" },
-      { "name": "cheese cubes", "quantity": "1 box", "category": "dairy", "freshness": "fresh" },
-      { "name": "cream cheese", "quantity": "1 tub", "category": "dairy", "freshness": "fresh" },
-      { "name": "blueberries", "quantity": "3 boxes", "category": "fruit", "freshness": "fresh" }
+      {
+        "name": "milk",
+        "quantity": "6 bottles",
+        "category": "dairy",
+        "freshness": "fresh"
+      },
+      {
+        "name": "blueberry",
+        "quantity": "3 containers",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "2 tubs",
+        "category": "dairy",
+        "freshness": "fresh"
+      },
+      {
+        "name": "cream cheese",
+        "quantity": "1 box",
+        "category": "dairy",
+        "freshness": "fresh"
+      },
+      {
+        "name": "cream cheese",
+        "quantity": "1 tub",
+        "category": "dairy",
+        "freshness": "fresh"
+      }
     ],
     "uncertain": [
-      { "name": "lychees", "reason": "round pale fruit in bottom drawer, could be longan" }
+      {
+        "name": "produce in bottom drawer",
+        "reason": "obscured by frosted glass cover of the drawer"
+      }
     ]
   },
   {
@@ -147,25 +473,68 @@
     "lng": 151.1808,
     "photo": "/seed-fridges/fridge06.jpg",
     "seed": true,
-    "updated_at": "2026-08-29T00:00:00Z",
+    "updated_at": "2026-08-29T11:09:06.344Z",
     "ingredients": [
-      { "name": "eggs", "quantity": "1 tray + 1 carton", "category": "egg", "freshness": "fresh" },
-      { "name": "fresh noodles", "quantity": "1 bag", "category": "grain", "freshness": "use_soon" },
-      { "name": "spinach", "quantity": "1 bag", "category": "vegetable", "freshness": "use_soon" },
-      { "name": "lettuce", "quantity": "1 bag", "category": "vegetable", "freshness": "fresh" },
-      { "name": "bok choy", "quantity": "2 bags", "category": "vegetable", "freshness": "use_soon" },
-      { "name": "okra", "quantity": "1 bag", "category": "vegetable", "freshness": "fresh" },
-      { "name": "broccoli", "quantity": "1 head", "category": "vegetable", "freshness": "fresh" },
-      { "name": "napa cabbage", "quantity": "1 head", "category": "vegetable", "freshness": "fresh" },
-      { "name": "broad beans", "quantity": "1 portion (shelled)", "category": "vegetable", "freshness": "fresh" },
-      { "name": "watermelon", "quantity": "1 cut wedge (wrapped)", "category": "fruit", "freshness": "use_soon" },
-      { "name": "oranges", "quantity": "a few", "category": "fruit", "freshness": "fresh" },
-      { "name": "juice carton", "quantity": "1", "category": "beverage", "freshness": "unknown" }
+      {
+        "name": "watermelon",
+        "quantity": "1 slice",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "leafy greens",
+        "quantity": "2 bags",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "napa cabbage",
+        "quantity": "1 head",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "edamame",
+        "quantity": "1 bag",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "white mushrooms",
+        "quantity": "1 container",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "broccoli",
+        "quantity": "1 bag",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "eggs",
+        "quantity": "12 eggs",
+        "category": "egg",
+        "freshness": "fresh"
+      }
     ],
     "uncertain": [
-      { "name": "cauliflower", "reason": "pale head in bag, partially hidden" },
-      { "name": "avocado", "reason": "dark item in middle bag" },
-      { "name": "cooked leftovers", "reason": "covered white bowl on middle shelf" }
+      {
+        "name": "brown beverage carton",
+        "reason": "Brand name and liquid contents are not clearly visible"
+      },
+      {
+        "name": "white bowl contents",
+        "reason": "Opaque bowl covers the food inside"
+      },
+      {
+        "name": "green vegetables in plastic bag",
+        "reason": "Partially glare-covered and wrapped in plastic bag, exact vegetable type unclear"
+      },
+      {
+        "name": "small green cup container",
+        "reason": "Unclear whether it is matcha pudding, dipping sauce, or jelly"
+      }
     ]
   },
   {
@@ -176,24 +545,80 @@
     "lng": 151.1712,
     "photo": "/seed-fridges/fridge07.jpg",
     "seed": true,
-    "updated_at": "2026-08-29T00:00:00Z",
+    "updated_at": "2026-08-29T11:09:19.463Z",
     "ingredients": [
-      { "name": "button mushrooms", "quantity": "1 box", "category": "vegetable", "freshness": "use_soon" },
-      { "name": "burger buns", "quantity": "2 packs", "category": "grain", "freshness": "fresh" },
-      { "name": "bread rolls", "quantity": "1 pack", "category": "grain", "freshness": "fresh" },
-      { "name": "yogurt cups", "quantity": "3", "category": "dairy", "freshness": "fresh" },
-      { "name": "plain yogurt", "quantity": "1 tub", "category": "dairy", "freshness": "fresh" },
-      { "name": "cut pineapple", "quantity": "1 box", "category": "fruit", "freshness": "use_soon" },
-      { "name": "apples", "quantity": "3 (incl. 1 green)", "category": "fruit", "freshness": "fresh" },
-      { "name": "strawberry jam", "quantity": "1 jar", "category": "condiment", "freshness": "unknown" },
-      { "name": "chilli paste", "quantity": "1 jar", "category": "condiment", "freshness": "unknown" },
-      { "name": "bok choy", "quantity": "1 bag", "category": "vegetable", "freshness": "fresh" },
-      { "name": "cos lettuce", "quantity": "1", "category": "vegetable", "freshness": "fresh" }
+      {
+        "name": "apple",
+        "quantity": "1",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "pineapple",
+        "quantity": "1 container",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "mushroom",
+        "quantity": "1 tray",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "2 tubs",
+        "category": "dairy",
+        "freshness": "unknown"
+      },
+      {
+        "name": "strawberry jam",
+        "quantity": "1 jar",
+        "category": "condiment",
+        "freshness": "unknown"
+      },
+      {
+        "name": "leafy greens",
+        "quantity": "1 bag",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "lettuce",
+        "quantity": "1 head",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "cucumber",
+        "quantity": "1",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "pastry",
+        "quantity": "2 containers",
+        "category": "grain",
+        "freshness": "unknown"
+      }
     ],
     "uncertain": [
-      { "name": "meat patties", "reason": "brown rounds in clamshell containers, could be baked goods" },
-      { "name": "hairy melon", "quantity": "1", "reason": "wrapped pale gourd on middle shelf" },
-      { "name": "cucumber", "reason": "green item behind vegetables" }
+      {
+        "name": "sauce in jar",
+        "reason": "Brand and specific jar contents are partially obscured (top left shelf)"
+      },
+      {
+        "name": "white condiment jar",
+        "reason": "Unclear exact condiment type (middle shelf right)"
+      },
+      {
+        "name": "foam-wrapped produce",
+        "reason": "Obscured by protective foam sleeve behind mushrooms"
+      },
+      {
+        "name": "stacked plastic food containers",
+        "reason": "Contents inside opaque/semi-transparent plastic packaging are not clearly visible"
+      }
     ]
   },
   {
@@ -204,30 +629,92 @@
     "lng": 151.1773,
     "photo": "/seed-fridges/fridge08.jpg",
     "seed": true,
-    "updated_at": "2026-08-29T00:00:00Z",
+    "updated_at": "2026-08-29T11:09:35.242Z",
     "ingredients": [
-      { "name": "eggs", "quantity": "1 holder + drawer tray", "category": "egg", "freshness": "fresh" },
-      { "name": "hot dog sausage", "quantity": "1 (with corn cob)", "category": "meat", "freshness": "use_soon" },
-      { "name": "corn cob", "quantity": "1", "category": "vegetable", "freshness": "fresh" },
-      { "name": "spinach", "quantity": "2 bags", "category": "vegetable", "freshness": "use_soon" },
-      { "name": "broccoli", "quantity": "1 head", "category": "vegetable", "freshness": "fresh" },
-      { "name": "fresh milk", "quantity": "1 bottle", "category": "dairy", "freshness": "fresh" },
-      { "name": "yogurt drinks", "quantity": "3 bottles", "category": "dairy", "freshness": "fresh" },
-      { "name": "yogurt cup", "quantity": "1", "category": "dairy", "freshness": "fresh" },
-      { "name": "blueberries", "quantity": "3 boxes", "category": "fruit", "freshness": "fresh" },
-      { "name": "mandarins", "quantity": "1 drawer", "category": "fruit", "freshness": "fresh" },
-      { "name": "instant porridge packs", "quantity": "several", "category": "grain", "freshness": "unknown" },
-      { "name": "doubanjiang chilli bean paste", "quantity": "1 jar", "category": "condiment", "freshness": "unknown" },
-      { "name": "garlic chilli sauce", "quantity": "1 jar", "category": "condiment", "freshness": "unknown" },
-      { "name": "fermented tofu", "quantity": "1 jar", "category": "condiment", "freshness": "unknown" },
-      { "name": "ginger paste", "quantity": "1 jar", "category": "condiment", "freshness": "unknown" },
-      { "name": "bottled coffee", "quantity": "1", "category": "beverage", "freshness": "unknown" },
-      { "name": "NFC juice", "quantity": "1 can", "category": "beverage", "freshness": "unknown" },
-      { "name": "cola", "quantity": "3 cans", "category": "beverage", "freshness": "unknown" }
+      {
+        "name": "egg",
+        "quantity": "4",
+        "category": "egg",
+        "freshness": "unknown"
+      },
+      {
+        "name": "leafy greens",
+        "quantity": "2 bags",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "broccoli",
+        "quantity": "1 bag",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "corn",
+        "quantity": "2 cobs",
+        "category": "vegetable",
+        "freshness": "unknown"
+      },
+      {
+        "name": "orange",
+        "quantity": "1 bag",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "blueberry",
+        "quantity": "3 small boxes",
+        "category": "fruit",
+        "freshness": "unknown"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "3 cups",
+        "category": "dairy",
+        "freshness": "unknown"
+      },
+      {
+        "name": "coffee drink",
+        "quantity": "2 bottles",
+        "category": "beverage",
+        "freshness": "unknown"
+      },
+      {
+        "name": "soft drink",
+        "quantity": "3 cans",
+        "category": "beverage",
+        "freshness": "unknown"
+      },
+      {
+        "name": "chili sauce",
+        "quantity": "2 jars",
+        "category": "condiment",
+        "freshness": "unknown"
+      },
+      {
+        "name": "fermented bean curd",
+        "quantity": "1 jar",
+        "category": "condiment",
+        "freshness": "unknown"
+      }
     ],
     "uncertain": [
-      { "name": "fried chicken", "reason": "golden pieces in bag in bottom drawer" },
-      { "name": "frozen vegetable packs", "reason": "green packs on right, labels unclear" }
+      {
+        "name": "red items in middle drawer container",
+        "reason": "Bagged items partially visible; could be sweet potatoes or sausages"
+      },
+      {
+        "name": "flat green packages on middle right shelf",
+        "reason": "Stacked opaque green packages with unclear contents"
+      },
+      {
+        "name": "dried food in bottom right drawer",
+        "reason": "Stored in sealed ziplock bag inside drawer, food identity unconfirmed"
+      },
+      {
+        "name": "horizontal bottles on top shelf",
+        "reason": "Lying flat in plastic rack, exact beverages cannot be clearly identified"
+      }
     ]
   },
   {
@@ -238,54 +725,200 @@
     "lng": 151.1738,
     "photo": "/seed-fridges/fridge09.jpg",
     "seed": true,
-    "updated_at": "2026-08-29T00:00:00Z",
+    "updated_at": "2026-08-29T11:09:52.647Z",
     "ingredients": [
-      { "name": "pork belly slices", "quantity": "1 tray", "category": "meat", "freshness": "use_soon" },
-      { "name": "eggs", "quantity": "1 tray", "category": "egg", "freshness": "fresh" },
-      { "name": "kimchi", "quantity": "1 jar", "category": "condiment", "freshness": "fresh" },
-      { "name": "cherry tomatoes", "quantity": "1 box", "category": "vegetable", "freshness": "fresh" },
-      { "name": "tomatoes", "quantity": "2", "category": "vegetable", "freshness": "fresh" },
-      { "name": "corn", "quantity": "1 cob", "category": "vegetable", "freshness": "fresh" },
-      { "name": "asian greens", "quantity": "1 bag", "category": "vegetable", "freshness": "fresh" },
-      { "name": "blueberries", "quantity": "1 box", "category": "fruit", "freshness": "fresh" },
-      { "name": "watermelon", "quantity": "cut pieces", "category": "fruit", "freshness": "use_soon" },
-      { "name": "apples", "quantity": "2", "category": "fruit", "freshness": "fresh" },
-      { "name": "pears", "quantity": "2", "category": "fruit", "freshness": "fresh" },
-      { "name": "pomelo", "quantity": "1", "category": "fruit", "freshness": "fresh" },
-      { "name": "soy milk", "quantity": "1 bottle", "category": "beverage", "freshness": "fresh" },
-      { "name": "beer", "quantity": "6+ cans", "category": "beverage", "freshness": "unknown" },
-      { "name": "tonic water", "quantity": "4 cans", "category": "beverage", "freshness": "unknown" },
-      { "name": "strawberry milk drink", "quantity": "1", "category": "beverage", "freshness": "unknown" }
+      {
+        "name": "kimchi",
+        "quantity": "1 jar",
+        "category": "condiment",
+        "freshness": "unknown"
+      },
+      {
+        "name": "beer",
+        "quantity": "8 cans",
+        "category": "beverage",
+        "freshness": "unknown"
+      },
+      {
+        "name": "roll cake",
+        "quantity": "1 package",
+        "category": "grain",
+        "freshness": "fresh"
+      },
+      {
+        "name": "soy milk",
+        "quantity": "1 bottle",
+        "category": "beverage",
+        "freshness": "unknown"
+      },
+      {
+        "name": "juice",
+        "quantity": "2 bottles",
+        "category": "beverage",
+        "freshness": "unknown"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "1 pack",
+        "category": "dairy",
+        "freshness": "unknown"
+      },
+      {
+        "name": "tonic water",
+        "quantity": "5 cans",
+        "category": "beverage",
+        "freshness": "unknown"
+      },
+      {
+        "name": "cherry tomatoes",
+        "quantity": "1 box",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "blueberries",
+        "quantity": "2 containers",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "tomato",
+        "quantity": "1",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "eggs",
+        "quantity": "1 carton",
+        "category": "egg",
+        "freshness": "fresh"
+      },
+      {
+        "name": "watermelon",
+        "quantity": "1 slice",
+        "category": "fruit",
+        "freshness": "use_soon"
+      },
+      {
+        "name": "apples",
+        "quantity": "4",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "oranges",
+        "quantity": "2",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "pomelo",
+        "quantity": "1 slice",
+        "category": "fruit",
+        "freshness": "use_soon"
+      },
+      {
+        "name": "pork belly",
+        "quantity": "3 packages",
+        "category": "meat",
+        "freshness": "fresh"
+      },
+      {
+        "name": "corn",
+        "quantity": "2 cobs",
+        "category": "vegetable",
+        "freshness": "fresh"
+      }
     ],
     "uncertain": [
-      { "name": "marinated beef slices", "reason": "dark meat tray next to pork belly" },
-      { "name": "fresh tofu", "reason": "white block near cheese area" },
-      { "name": "dumplings", "reason": "bagged white items on middle shelf" },
-      { "name": "kiwi", "reason": "brown fruit in drawer" }
+      {
+        "name": "white bag content",
+        "reason": "Top shelf item is wrapped inside an opaque white plastic bag"
+      },
+      {
+        "name": "glass container food",
+        "reason": "Food inside glass container on top right shelf is dark and partially obscured"
+      },
+      {
+        "name": "dark bumpy fruit",
+        "reason": "Fruit in crisper drawer is dark and partially covered, ambiguous if avocado or passion fruit"
+      },
+      {
+        "name": "leafy greens",
+        "reason": "Green vegetables behind apples in crisper drawer are mostly hidden"
+      }
     ]
   },
   {
     "id": "u_seed10",
     "name": "Grace",
     "email": "grace.demo@savemyfridge.example",
-    "lat": -33.8890,
+    "lat": -33.889,
     "lng": 151.1832,
     "photo": "/seed-fridges/fridge10.jpg",
     "seed": true,
-    "updated_at": "2026-08-29T00:00:00Z",
+    "updated_at": "2026-08-29T11:10:06.936Z",
     "ingredients": [
-      { "name": "eggs", "quantity": "1 tray (~10)", "category": "egg", "freshness": "fresh" },
-      { "name": "loose-leaf lettuce", "quantity": "1 large bunch", "category": "vegetable", "freshness": "use_soon" },
-      { "name": "iceberg lettuce", "quantity": "2 heads", "category": "vegetable", "freshness": "fresh" },
-      { "name": "cabbage", "quantity": "1 head", "category": "vegetable", "freshness": "fresh" },
-      { "name": "green chillies", "quantity": "1 box", "category": "vegetable", "freshness": "fresh" },
-      { "name": "strawberries", "quantity": "1 box", "category": "fruit", "freshness": "use_soon" },
-      { "name": "green grapes", "quantity": "1 box", "category": "fruit", "freshness": "fresh" },
-      { "name": "chilli paste", "quantity": "2 jars", "category": "condiment", "freshness": "unknown" },
-      { "name": "cooking oil", "quantity": "1 bottle", "category": "condiment", "freshness": "unknown" }
+      {
+        "name": "lettuce",
+        "quantity": "large amount",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "strawberry",
+        "quantity": "1 container",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "cucumber",
+        "quantity": "about 5",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "cabbage",
+        "quantity": "2 heads",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "egg",
+        "quantity": "about 12",
+        "category": "egg",
+        "freshness": "unknown"
+      },
+      {
+        "name": "green grape",
+        "quantity": "1 container",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "salad dressing",
+        "quantity": "1 bottle",
+        "category": "condiment",
+        "freshness": "unknown"
+      }
     ],
     "uncertain": [
-      { "name": "crab paste", "reason": "dark jar with handwritten label" }
+      {
+        "name": "yellow liquid in pitcher",
+        "reason": "unclear whether it is juice, tea, or liquid oil"
+      },
+      {
+        "name": "contents in glass jars",
+        "reason": "preserved or fermented food inside dark jars cannot be precisely identified"
+      },
+      {
+        "name": "contents in bottom crisper drawer",
+        "reason": "items are obscured inside plastic bags and frosted drawer panel"
+      },
+      {
+        "name": "small drawer packages",
+        "reason": "small wrapped snacks or butter blocks are partially obscured"
+      }
     ]
   },
   {
@@ -296,25 +929,118 @@
     "lng": 151.1727,
     "photo": "/seed-fridges/fridge11.jpg",
     "seed": true,
-    "updated_at": "2026-08-29T00:00:00Z",
+    "updated_at": "2026-08-29T11:10:26.608Z",
     "ingredients": [
-      { "name": "firm tofu", "quantity": "2 packs", "category": "other", "freshness": "use_soon" },
-      { "name": "eggs", "quantity": "2 trays", "category": "egg", "freshness": "fresh" },
-      { "name": "hot dog sausages", "quantity": "1 pack", "category": "meat", "freshness": "fresh" },
-      { "name": "eggplants", "quantity": "3", "category": "vegetable", "freshness": "fresh" },
-      { "name": "lettuce", "quantity": "2 bags", "category": "vegetable", "freshness": "fresh" },
-      { "name": "green peppers", "quantity": "1 box", "category": "vegetable", "freshness": "fresh" },
-      { "name": "pickled vegetables", "quantity": "2 jars", "category": "condiment", "freshness": "unknown" },
-      { "name": "mayonnaise", "quantity": "1 bottle", "category": "condiment", "freshness": "unknown" },
-      { "name": "peaches", "quantity": "1 drawer", "category": "fruit", "freshness": "fresh" },
-      { "name": "grapes", "quantity": "1 bag", "category": "fruit", "freshness": "fresh" }
+      {
+        "name": "tofu",
+        "quantity": "1 stack",
+        "category": "other",
+        "freshness": "fresh"
+      },
+      {
+        "name": "green grapes",
+        "quantity": "1 container",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "chili pepper",
+        "quantity": "1 container",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "2 cups",
+        "category": "dairy",
+        "freshness": "fresh"
+      },
+      {
+        "name": "garlic",
+        "quantity": "1 portion",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "scallion",
+        "quantity": "1 container",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "sliced meat",
+        "quantity": "2 trays",
+        "category": "meat",
+        "freshness": "fresh"
+      },
+      {
+        "name": "sausage",
+        "quantity": "1 package",
+        "category": "meat",
+        "freshness": "fresh"
+      },
+      {
+        "name": "peach",
+        "quantity": "3",
+        "category": "fruit",
+        "freshness": "fresh"
+      },
+      {
+        "name": "egg",
+        "quantity": "around 15",
+        "category": "egg",
+        "freshness": "fresh"
+      },
+      {
+        "name": "cilantro",
+        "quantity": "1 bag",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "eggplant",
+        "quantity": "4",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "lettuce",
+        "quantity": "1 head",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "carrot",
+        "quantity": "1",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "cabbage",
+        "quantity": "1 head",
+        "category": "vegetable",
+        "freshness": "fresh"
+      },
+      {
+        "name": "salad dressing",
+        "quantity": "1 bottle",
+        "category": "condiment",
+        "freshness": "fresh"
+      }
     ],
     "uncertain": [
-      { "name": "salmon fillet", "reason": "pink slices in wrapped tray, middle shelf" },
-      { "name": "fish balls", "reason": "pale rounds in container" },
-      { "name": "quail eggs", "reason": "small speckled eggs in box" },
-      { "name": "seaweed", "reason": "dark leafy item in sealed container" },
-      { "name": "white radish", "reason": "pale root vegetable in drawer" }
+      {
+        "name": "yellow bag on top shelf",
+        "reason": "brand packaging conceals specific dry ingredient/powder type"
+      },
+      {
+        "name": "dark jar on middle shelf",
+        "reason": "contents inside dark glass container are not clearly visible"
+      },
+      {
+        "name": "bottled drinks on right door",
+        "reason": "beverage labels are partially obscured or reversed"
+      }
     ]
   }
 ]
