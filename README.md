@@ -2,7 +2,10 @@
 
 **It's a match! Your fridge and a neighbour's fridge just swiped right on each other.**
 
-![FridgeTinder demo](docs/demo.gif)
+<p>
+  <img src="docs/demo.gif" height="300" alt="FridgeTinder demo" />
+  <img src="docs/demo2.gif" height="300" alt="FridgeTinder full flow demo" />
+</p>
 
 FridgeTinder is Tinder for fridges: scan your fridge with your camera, AI reads the ingredients, finds nearby fridges whose contents *combine* with yours into real dishes, and sends an anonymous AI-written invite to cook together - before the food goes to waste.
 
