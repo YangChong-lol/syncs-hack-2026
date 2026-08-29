@@ -51,12 +51,13 @@ function buildCard(m) {
     <div class="sw-stamp like">INVITE</div>
     <div class="sw-stamp nope">PASS</div>
     <img class="sw-photo" src="${m.photo}" alt="${m.name}'s fridge" draggable="false" />
+    <div class="sw-grad"></div>
     <div class="sw-info">
       <div class="sw-title">
-        <h3>${m.name}'s fridge</h3>
+        <h3>${m.name}<small>'s fridge</small></h3>
         <span class="score-badge ${m.score >= 80 ? '' : 'mid'}">${m.score}<small>match</small></span>
       </div>
-      <p class="hint">${fmtDist(m.distance_m)}${m.invite_pending ? ' \u00b7 invite already pending' : ''}</p>
+      <p class="sw-meta">&#128205; ${fmtDist(m.distance_m)}${m.invite_pending ? ' \u00b7 invite already pending' : ''}</p>
       <div class="sw-dishes">
         ${dishes
           .map(
