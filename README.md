@@ -72,4 +72,6 @@ scripts/extract-seeds.js  re-extract seed inventories via API
 
 ## Team
 
-- (add each member's role/contribution here before submission)
+- Yang Chong - Designer, programmer
+- Ruihan Zhao - Designer, UI programmer
+- Cursor Agent - The Workhorse
