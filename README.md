@@ -10,8 +10,8 @@ Built for **SYNCS HACK 2026** - theme: *Blocks that make up the world*. Ingredie
 
 1. **Log in** (Email + password; first login creates your account) - you join the match pool.
 2. **Profile tab**: point your camera at your open fridge. A live indicator turns green ("Fridge detected") only when AI confirms the camera is actually aimed at a fridge interior - only then does the shutter unlock. After the shot, AI extracts every visible ingredient; you confirm/edit the list. Drop a pin for your location. Both are required to unlock matching.
-3. **Explore tab**: nearby fridges appear on the map. AI proposes real dishes that use ingredients from *both* fridges, with a match score (rubric-anchored, reproducible) and what each side brings. Pick dishes and send an anonymous invite - the email is AI-written and relayed by the platform.
-4. **Swipe tab** (under construction): browse matched fridges as a swipe deck; right swipe = send the invite.
+3. **Swipe tab**: matched fridges as a Tinder-style deck - each card shows a neighbour's fridge and up to 2 dishes you could cook *together*. Hold a dish and swipe right to send an anonymous invite; swipe left to pass.
+4. **Explore tab**: the same matches on a map. AI proposes real dishes that use ingredients from *both* fridges, with a match score (rubric-anchored, reproducible) and what each side brings. Pick dishes and send an anonymous invite - the email is AI-written and relayed by the platform.
 5. **Invites**: recipients see the invite in their Profile inbox (real users also get the email). When they hit **Accept**, and only then, both sides see each other's contact - emails stay private until mutual consent. Demo seed users auto-accept after ~25 s so the full loop can be shown live.
 
 ## Tech
@@ -23,15 +23,41 @@ Built for **SYNCS HACK 2026** - theme: *Blocks that make up the world*. Ingredie
 
 ## Quick start
 
+Requires **Node.js 18+** (https://nodejs.org).
+
 ```bash
+git clone https://github.com/YangChong-lol/syncs-hack-2026.git
+cd syncs-hack-2026
 npm install
-copy .env.example .env    # then put your GEMINI_API_KEY inside
-npm start                 # http://localhost:3000
+copy .env.example .env    # Windows (use `cp` on macOS/Linux), then put your GEMINI_API_KEY inside
+npm start                 # open http://localhost:3000
 ```
 
-- Get a free Gemini key (no credit card): https://aistudio.google.com/apikey
+Log in with any email + password (first login creates the account), scan a fridge in **Profile**, drop a location pin near **Camperdown, Sydney** (that's where the 11 seed neighbours live), then start swiping.
+
+- Get a Gemini key: https://aistudio.google.com/apikey (models used: `gemini-3.6-flash` + `gemini-3.5-flash-lite`, configurable in `.env`).
 - **No key? It still runs** in demo mode with canned detection/extraction and a rule-based matcher, so the full flow is clickable.
-- Camera requires `localhost` or HTTPS. On a phone, use a tunnel (e.g. `npx localtunnel --port 3000`) or use the "Upload a photo instead" fallback.
+- **Emails**: without SMTP settings in `.env`, invites are in-app + preview only. Fill `SMTP_HOST/SMTP_USER/SMTP_PASS` (e.g. Gmail app password) to really send.
+
+### Test on a phone
+
+The camera API requires HTTPS, so expose the local server through a tunnel:
+
+```bash
+cloudflared tunnel --url http://localhost:3000   # or: npx localtunnel --port 3000
+```
+
+Open the printed `https://....trycloudflare.com` URL on your phone. The URL changes on every tunnel restart. No tunnel? Use the "Upload a photo instead" fallback.
+
+### Useful commands
+
+```bash
+node scripts/test-match-invite.js   # E2E test: auth -> profile -> match -> invite -> auto-accept
+node scripts/test-real-api.js public/seed-fridges/fridge03.jpg   # vision smoke test
+npm run seed                        # re-extract seed inventories with your API key
+```
+
+To reset the demo to a clean state, stop the server and delete `data/users.json` and `data/invites.json` - seed users regenerate on next start.
 
 ### 中文快速开始
 
@@ -41,7 +67,7 @@ copy .env.example .env    # 在 .env 里填入 GEMINI_API_KEY
 npm start                 # 打开 http://localhost:3000
 ```
 
-不填 key 也能跑(演示模式,识别与匹配用内置假结果);填了 key 后识别、匹配、写信全部真实调用 Gemini。
+任意邮箱+密码登录即注册;在 Profile 里扫冰箱、把地址钉在 Camperdown 附近(11 个种子邻居都在那),然后去 Swipe 划卡。不填 key 也能跑(演示模式,识别与匹配用内置假结果);填了 key 后识别、匹配、写信全部真实调用 Gemini。手机测试需要 HTTPS:`cloudflared tunnel --url http://localhost:3000` 后用手机打开输出的网址。重置演示数据:停服后删除 `data/users.json` 和 `data/invites.json`。
 
 ## Seed data
 
@@ -61,7 +87,9 @@ lib/mailer.js        anonymous email relay
 prompts/             all LLM prompts (the real "source code" of the AI)
 public/index.html    login page (email + password)
 public/app.html      main app: Swipe / Explore / Profile tabs
-public/js/app.js     app shell + FTApp interface (swipe deck plugs in here)
+public/js/login.js   login / first-login-registers flow
+public/js/app.js     app shell + FTApp interface (shared match cache, invites)
+public/js/swipe.js   Tinder-style deck: hold a dish, swipe right to invite
 public/js/explore.js map of matched fridges + invite modal
 public/js/profile.js fridge scan, location, invite inbox/outbox
 public/seed-fridges/ seed users' fridge photos
