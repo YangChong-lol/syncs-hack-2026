@@ -2,6 +2,10 @@
 
 **It's a match! Your fridge and a neighbour's fridge just swiped right on each other.**
 
+### 🔗 Live demo: **https://syncs-hack-2026.onrender.com**
+
+*(Free hosting - the first load may take ~30s to wake up, then it's fast. Works best on a phone.)*
+
 <p>
   <img src="docs/demo.gif" height="300" alt="FridgeTinder demo" />
   <img src="docs/demo2.gif" height="300" alt="FridgeTinder full flow demo" />
